@@ -1,0 +1,104 @@
+
+.container {
+    width: 100%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgb(240, 247, 239);
+}
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.about {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    margin-bottom: 10px;
+}
+
+.section p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: green;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.member {
+    text-align: center;
+    max-width: 200px;
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.member h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.member p {
+    font-size: 16px;
+    color: #666;
+}
+footer {
+    background: rgb(240, 247, 239);
+    padding: 20px;
+    text-align: center;
+}

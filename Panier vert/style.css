@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: url(images/legume.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgb(240, 247, 239);
+}
+
+nav .logo {
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: green;
+    font-size: 16px;
+    margin-left: 20px;
+    border-radius: 50px;
+    border: 2px solid rgb(246, 224, 28);
+    padding: 10px 20px;
+}
+
+.acceuil {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.acceuil a {
+    text-decoration: none;
+    color: yellow;
+    border-radius: 50px;
+    border: 2px solid rgb(246, 224, 28);
+    padding: 10px 20px;
+}
+
+.acceuil a:hover {
+    color: white;
+    background: green;
+}
+
+.acceuil h1 {
+    font-size: 80px;
+    color: rgb(246, 224, 28);
+    font-weight: 600;
+}
+
+.acceuil span {
+    color: rgb(212, 246, 118);
+    font-weight: 800;
+}
+
+.nav-link:hover, .nav-link:active {
+    color: white;
+    background: green;
+}
+
+.navbar-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-mobile.show {
+    display: flex;
+}
+
+.navbar-mobile ul {
+    width: 100%;
+}
+
+.navbar-mobile ul li {
+    display: block;
+    padding: 10px;
+}
+
+.navbar-mobile ul li a {
+    color: #333;
+}
+
+.menu-icon, .close-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: block;
+}
+
+.close-icon {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+@media (max-width: 845px) {
+    .nav-links {
+        display: none;
+    }
+
+    .navbar-mobile ul li a {
+        border:none;
+        border-radius: 0;
+    }
+    .navbar-mobile ul li a:hover{
+        color: white;
+        background-color: green;
+    }
+
+    .menu-icon {
+        display: block;
+        /* Ajout */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .navbar-mobile.show .close-icon {
+        display: block;
+    }
+
+    .acceuil h1 {
+        font-size: 40px;
+    }
+}
+footer {
+    background: rgb(240, 247, 239);
+    padding: 20px;
+    text-align: center;
+    bottom: 0%;
+}

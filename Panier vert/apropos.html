@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="apropos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="images/logopv.png" alt="Panier vert" class="logo">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Acceuil</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="apropos.html" class="nav-link" style="color: white; background: green;">A-propos</a>
+                    <a href="equipe.html" class="nav-link">Equipe dev</a>
+                </div>
+                <i class="fa-solid fa-bars menu-icon"></i>
+                <div class="navbar-mobile">
+                    <i class="fa-solid fa-xmark close-icon" aria-hidden="true"></i>
+                    <ul>
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="apropos.html">A-propos</a></li>
+                        <li><a href="equipe.html">Equipe dev</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="about">
+            <h1>À propos de nous</h1>
+            <div class="content">
+                <div class="section">
+                    <h2>C'est quoi Panier vert ?</h2>
+                    <p>
+
+                        Panier vert est une entreprise de vente de légumes et épices prêt à cuisiner, nous vendons aussi les fruits savoureux et mixtes vegetable.
+                        
+                        Pourquoi panier vert? 
+                        
+                        Panier vert parce que : <br>
+                        
+                        <ul>
+                            <li>PANIER : est un instrument qui peut contenir plusieurs choses entre autres; les légumes, les épices , les fruits, des livres et autres choses.</li>
+                            <li>VERT : Qui symbolise la jeunesse, la bonne santé et l’écologie.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="section">
+                    <h2>Objectif</h2>
+                    <p>Notre entreprise a pour objet de fournir, livrer des légumes bios, épices, fruits et faciliter la tâche culinaire aux personnes n’ayant pas du temps à l’occurrence des étudiants vivant dans le home et des travailleurs à temps plein mais aussi dans le but de promouvoir la consommation bio et saine pour afin d’équilibrer l’alimentation. Elle résout le problème de l’alimentation bio et saine, simplifie la tache culinaire, aide à investir dans sa santé tout en équilibrant l’alimentation.</p>
+                </div>
+                <div class="section">
+                    <h2>Mission</h2>
+                    <p>Panier vert Sarl a pour mission d'aider les personnes n’ayant pas assez de temps d’accéder à une alimentation simple et bio et sur base des services rendus à la population, panier vert contribuera à la lutte contre certaines maladies dues à la mauvaise alimentation et suite à nos plantations d’arbre en grande quantité nous allons contribuer à la lutte contre le réchauffement climatique.</p>
+                </div>
+                <div class="section">
+                    <h2>Vision</h2>
+                    <p>Notre vision est de devenir leader et grand fournisseur sur le marché et l'étendue de la ville en rendant la consommation locale bio rapide, saine,  et simple accessible à tous</p>
+                </div>
+                <div class="section">
+                    <h2>Contact</h2>
+                    <p>Vous pouvez nous contacter via nos réseaux sociaux ou par email.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>Notre équipe</h2>
+                    <div class="team">
+                        <div class="member">
+                            <img src="images/pdg.jpeg" alt="Membre 1">
+                            <h3>Patrick CIMBALANGA</h3>
+                            <p>Fondateur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023-2024 Panier Vert. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const closeIcon = document.querySelector('.close-icon');
+            const navbarMobile = document.querySelector('.navbar-mobile');
+
+            menuIcon.addEventListener('click', function() {
+                navbarMobile.classList.add('show');
+            });
+
+            closeIcon.addEventListener('click', function() {
+                navbarMobile.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>

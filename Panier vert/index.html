@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="images/logopv.png" alt="Panier vert" class="logo">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link" style="color: white; background: green;">Acceuil</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="apropos.html" class="nav-link">A-propos</a>
+                    <a href="equipe.html" class="nav-link">Equipe dev</a>
+                </div>
+                <i class="fa-solid fa-bars menu-icon"></i>
+                <div class="navbar-mobile">
+                    <i class="fa-solid fa-xmark close-icon" aria-hidden="true"></i>
+                    <ul>
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="apropos.html">A-propos</a></li>
+                        <li><a href="equipe.html">Equipe dev</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="acceuil">
+            <h1>Bienvenue <span class="animation"></span></h1>
+            <a href="services.html">Commander</a>
+        </div>
+    </header>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.animation', {
+            strings: ['Chez panier vert', 'sur notre site', ', acheter en toute confiance', ', livraison tic-tac'],
+            typedSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const closeIcon = document.querySelector('.close-icon');
+            const navbarMobile = document.querySelector('.navbar-mobile');
+
+            menuIcon.addEventListener('click', function() {
+                navbarMobile.classList.add('show');
+            });
+
+            closeIcon.addEventListener('click', function() {
+                navbarMobile.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

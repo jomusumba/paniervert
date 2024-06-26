@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="images/logopv.png" alt="Panier vert" class="logo">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Acceuil</a>
+                    <a href="services.html" class="nav-link" style="color: white; background: green;">Services</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="apropos.html" class="nav-link">A-propos</a>
+                    <a href="equipe.html" class="nav-link">Equipe dev</a>
+                </div>
+                <i class="fa-solid fa-bars menu-icon"></i>
+                <div class="navbar-mobile">
+                    <i class="fa-solid fa-xmark close-icon" aria-hidden="true"></i>
+                    <ul>
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="apropos.html">A-propos</a></li>
+                        <li><a href="equipe.html">Equipe dev</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+     <section id="services">
+        <div class="serv">
+            <h2 style="color: white;">Nos Services</h2>
+            <div class="service-item">
+                <h3>1. Vente de légumes</h3>
+                <p>Découvrez nos légumes frais et colorés, parfaits pour des repas sains et délicieux ! Cultivés avec amour, nos légumes sont prêts à réjoindre votre assiette pour vous régaler. Faites le plein de vitamines et de saveurs avec notre sélection de légumes de qualité ! <br><strong>Cliquez sur la photo pour découvrir nos légumes 👇</strong></p>
+                <a href="legume.html"><img src="images/IMG-20240620-WA0041.jpg" alt="Service 1"></a>
+            </div>
+            <div class="service-item">
+                <h3>2. Vente de fruits</h3>
+                <p> Sucré, juteux, irrésistible, nos fruits frais sont là pour égayer vos journées ! Croquez dans nos fruits plein de vitalité pour une explosion de saveurs et de bienfaits. Laissez-vous tenter par la fraicheur naturelle avec notre gamme de fruits gourmands ! <br><strong>Cliquez sur la photo pour découvrir nos fruits 👇</strong></p>
+                <a href="fruits.html"><img src="images/FRUITS.jpg" alt="Service 2"></a>
+            </div>
+       </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023-2024 Panier Vert. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuIcon = document.querySelector('.fa-bars');
+            const closeIcon = document.querySelector('.fa-xmark');
+            const navbarMobile = document.querySelector('.navbar-mobile');
+
+            menuIcon.addEventListener('click', function() {
+                navbarMobile.classList.add('show');
+            });
+
+            closeIcon.addEventListener('click', function() {
+                navbarMobile.classList.remove('show');
+            });
+        });
+    </script>
+    </body>
+</html>

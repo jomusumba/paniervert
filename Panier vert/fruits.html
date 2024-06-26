@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="legume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <img src="images/logopv.png" alt="Panier vert" class="logo">
+            </div>
+    </header>
+    <main>
+        <section class="produits">
+            <h1>Nos fruits</h1>
+            <div class="product-list">
+                <div class="produit">
+                    <img src="fruits/pomme1.png" alt="Pomme">
+                    <h2>Pomme</h2>
+                    <p>Prix: 3.00$/kg</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <img src="fruits/orange1.png" alt="Orange">
+                    <h2>Orange</h2>
+                    <p>Prix: 2.00$/kg</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <img src="fruits/citron1.png" alt="Citron">
+                    <h2>Citron</h2>
+                    <p>Prix: 1.5O$/kg</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <img src="fruits/mango1.png" alt="Mangue">
+                    <h2>Mangue</h2>
+                    <p>Prix: 1.50$/kg</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <img src="fruits/goyave1.png" alt="Goyave">
+                    <h2>Goyave</h2>
+                    <p>Prix: 1.00$/kg</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <img src="fruits/ananas1.png" alt="Ananas">
+                    <h2>Ananas</h2>
+                    <p>Prix: 1.50$/kg</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <img src="fruits/banane1.png" alt="Banane">
+                    <h2>Banane</h2>
+                    <p>Prix: 2.00$/kg</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <img src="fruits/pastèque1.png" alt="Pastèque">
+                    <h2>Pastèque</h2>
+                    <p>Prix: 2.00$/kg</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="produit">
+                    <img src="fruits/coeur de boeuf1.png" alt="Coeur de boeuf">
+                    <h2>Coeur de boeuf</h2>
+                    <p>Prix: 1.00$/kg</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </section>
+        <section class="cart">
+            <h2>Panier</h2>
+            <ul class="cart-items">
+            </ul>
+            <div class="cart-total">
+                <h3>Total: <span>0.00$</span></h3>
+                <button class="checkout">Passer à la caisse</button>
+            </div>
+            <div class="cart-total">
+                <button style="background-color: green;" class="checkout"><a href="services.html" style="text-decoration: none; color: white;  width: 100%;">Retour</a></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023-2024 Panier Vert. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const cartItems = document.querySelector('.cart-items');
+            const cartTotal = document.querySelector('.cart-total span');
+
+            let total = 0;
+            const cart = [];
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = button.parentElement;
+                    const productName = product.querySelector('h2').innerText;
+                    const productPrice = parseFloat(product.querySelector('p').innerText.replace('Prix: ', '').replace('$', '').replace('/kg', ''));
+                    total += productPrice;
+
+                    const cartItem = document.createElement('li');
+                    cartItem.innerText = `${productName} - ${productPrice.toFixed(2)}$`;
+                    cartItems.appendChild(cartItem);
+
+                    cart.push({ name: productName, price: productPrice });
+
+                    cartTotal.innerText = `${total.toFixed(2)}$`;
+                });
+            });
+
+            const checkoutButton = document.querySelector('.checkout');
+            checkoutButton.addEventListener('click', function() {
+                if (cart.length > 0) {
+                    alert(`Vous achetez:\n${cart.map(item => `${item.name} - ${item.price.toFixed(2)}$`).join('\n')}\n\nTotal: ${total.toFixed(2)}$`);
+                } else {
+                    alert('Votre panier est vide.');
+                }
+            });
+    </script>
+</body>
+</html>
